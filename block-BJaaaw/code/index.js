@@ -6,11 +6,20 @@
   - `if` the number is even print the message " number is even"
   - `if` the number is odd print the message "number is odd"
 */
+if (Number);
+alert ("number is even");
+
+if (Number);
+alert ("number is odd");
 
 // 2. Write a program to accept two numbers from user using`prompt` and alert the max value.
+prompt (Number);
 
 // 3. Convert the above code using`?` terniary operator
-
+let number = 8;
+//condition ? exp1, exp2
+alert ("2 is even number");
+alert ("4 is even number");
 /*
 4. Write a program that asks the user for the house name and check the following conditions:
 
@@ -18,9 +27,18 @@
   - `if` house name is "lannister" then print the message " A lannister always pays his debt"
   - `else` print the message " All men must die"
 */
+if (houseName = stark);
+alert ("Winter is comming");
+
+if ( houseName = lannister);
+alert ("A lannister always pays debt");
 
 // 5. Convert the above code using`?` terniary operator
-
+if ( houseName = lannister);
+alert ("A lannister always pays debt");
+else{
+  alert ("winnter is comming")
+}
 // Switch
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
