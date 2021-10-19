@@ -11,15 +11,16 @@ Write a program that asks the user his/her age and check for the following condi
 👇
 */
 
-let age = prompt("Your age")
+let age = Number(prompt("What is Your age"));
+
 if (age>=12 && age<=55) {
-  alert("You can participate in the marathon")
-} if(age>=4 && age<=11){
-  alert(" You are too young to participate in the marathon")
-} if (age<4){
-  alert(" Hey Kiddo! Can You Walk ?")
-} if (age>55){
-  alert(" You are too old to participate in the marthon")
+  alert("You can participate in the marathon");
+} else if(age>=4 && age<=11){
+  alert(" You are too young to participate in the marathon");
+} else if (age<4){
+  alert(" Hey Kiddo! Can You Walk ?");
+} else{
+  alert(" You are too old to participate in the marthon");
 }
 
 // Loops
@@ -33,7 +34,18 @@ n = 7 => output: heeeeeeello
 */
 // [Your code goes here]
 
-// let n = Number(prompt("enter a number"));
+let count = +prompt("Enter the number of e!")
+
+const start = "h";
+const end = "llo";
+
+let middle = "";
+
+for (let i=0; i<count; i++){
+  middle += "e"
+}
+
+alert(start + middle + end);
 
 
 /*
@@ -41,6 +53,15 @@ Program to calculate the sum of first n natural numbers(1,2,3...n are known as n
 👇
 */
 // [Your code goes here]
+
+let max = prompt("Enter the value of n")
+
+let sum = 0;
+
+for(let i=1; i<=max; i++){
+  sum += i;
+}
+alert(`The value of sum id ${sum}`)
 
 /* Switch Statement
 
@@ -61,8 +82,9 @@ Take a number value from user and alert the message if it matches the conditions
 */
 
 
-let num = prompt("Enter a number");
-switch (num =(`${num}`)){
+let number = +prompt("Enter a number between 1-10?");
+
+switch (number){
   case 1 :
     alert('ONE');
     break;
@@ -113,15 +135,69 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 
 // [Your code goes here]
 
+let marks = prompt("Enter marks(0-100)");
+
+switch(true){
+  case marks>90:
+    alert("AA")
+    break;
+  case marks>80 && marks<90:
+    alert("AB")
+    break;
+  case marks>70 && marks<60:
+    alert("BB")
+    break;
+  case marks>60 && marks<50:
+    alert("CB")
+    break;
+  case marks>50 && marks<40:
+    alert("CC")
+    break;
+  case marks>40 && marks<30:
+    alert("CD")
+    break;
+  case marks>30 && marks<20:
+    alert("DD")
+    break;
+  case marks<=30:
+    alert("FF")
+    break;
+}
+
+
 /*
  🎖Write a JavaScript program that takes two `integers` from user (using prompt) and alerts the larger number.
 */
 // [your code goes here]
 
+const numA = prompt("Enter first number");
+const numB = prompt("Enter second number");
+
+if (numA>numB){
+  alert("first number is greater!")
+} else {
+  alert("second number is greater!")
+}
+
 /*
 🎖Write a JavaScript conditional statement to find the sign (+, -) of product of three numbers. Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
 */
 // [Your code goes here]
+
+const num1 = prompt("Enter first number");
+const num2 = prompt("Enter second number");
+const num3 = prompt("Enter third number");
+
+let product = num1 * num2 * num3 ;
+
+if (product > 0) {
+  alert(`the final value is positive`)
+} else {
+  alert(`The final value is negative`)
+}
+
+
+
 
 /* Calculator
  🎖Make a simple calculator with these functions. Using prompt, type conversion, if else statement. Use prompt to take the input from user i.e two numbers and an operation (Add, Sub, Mul, Div).
@@ -136,3 +212,24 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 */
 
 // [Your code goes here]
+
+let firstNum = +prompt("enter first value for operation");
+let secondNum = +prompt("enter second value for operation");
+let operation = +prompt("enter an operation(Add, Sub , Mul, Div)");
+
+switch(operation){
+  case "Add":
+    alert(`the sum of ${firstNum} and ${secondNum} is ${firstNum} + ${secondNum} `);
+    break;
+  case "Sub":
+    alert(`the subtraction of ${firstNum} and ${secondNum} is ${firstNum} - ${secondNum} `);
+    break;
+  case "Mul":
+  alert(`the multiplication of ${firstNum} and ${secondNum} is ${firstNum} * ${secondNum} `);
+  break;
+  case "Div":
+    alert(`the division of ${firstNum} and ${secondNum} is ${firstNum} / ${secondNum} `);
+    break;
+  default:
+    alert("Enter valid input");
+}
